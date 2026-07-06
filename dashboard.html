@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#1565C0">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="apple-mobile-web-app-title" content="Presensi PKL">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<script>
+
+if("serviceWorker" in navigator){
+
+    navigator.serviceWorker.register("sw.js");
+
+}
+
+</script>
+
+<script src="js/pwa.js"></script>
+
+<body>
+
+<div class="login-card">
+
+<h2>Dashboard</h2>
+
+<hr><br>
+
+<p id="nama"></p>
+
+<p id="nis"></p>
+
+<p id="kelas"></p>
+
+<p id="tempat"></p>
+
+<br>
+
+<hr>
+
+<h3>Upload Presensi</h3>
+
+<input
+type="file"
+id="foto"
+accept="image/*">
+
+<br><br>
+
+<img
+id="preview"
+style="display:none;
+width:250px;
+border-radius:10px;">
+
+<br><br>
+
+<button id="btnUpload">
+
+☁ Upload Presensi
+
+</button>
+
+<br><br>
+
+<progress
+id="progress"
+value="0"
+max="100"
+style="width:100%;display:none;">
+</progress>
+
+<p id="statusUpload"></p>
+
+<hr>
+
+<h3>Status Hari Ini</h3>
+
+<p id="statusHari">
+
+Memeriksa...
+
+</p>
+
+<hr>
+
+<h3>Riwayat Upload</h3>
+
+<div id="riwayat">
+
+Belum ada data
+
+</div>
+
+<p id="status"></p>
+
+<button
+id="btnInstall"
+class="btn-primary"
+style="display:none"
+onclick="installApp()">
+
+📲 Install Aplikasi
+
+</button>
+
+<button id="logout">
+
+Logout
+
+</button>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/util.js"></script>
+<script src="js/api.js"></script>
+<script src="js/image-compressor.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
