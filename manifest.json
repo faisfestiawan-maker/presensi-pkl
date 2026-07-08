@@ -1,15 +1,15 @@
 {
-    "name":"Presensi PKL SMKN 1 Glagah",
+    "name":"Presensi PKL Jurusan Teknik Elektronika SMKN 1 Glagah",
 
     "short_name":"Presensi PKL",
 
-    "description":"Aplikasi Presensi PKL Jurusan Teknik Elektronika Industri",
+    "description":"Aplikasi Presensi PKL Jurusan Teknik Elektronika",
 
     "display":"standalone",
 
     "orientation":"portrait",
 
-    "start_url":"./loading.html",
+    "start_url":"./index.html",
 
     "scope":"./",
 
