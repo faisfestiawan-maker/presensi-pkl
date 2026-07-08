@@ -65,10 +65,51 @@ if("serviceWorker" in navigator){
 
 <h3>Upload Presensi</h3>
 
+<div class="status-presensi">
+
+<label>
+
+<input type="radio"
+name="keterangan"
+value="Hadir"
+checked>
+
+Hadir
+
+</label>
+
+<label>
+
+<input type="radio"
+name="keterangan"
+value="Sakit">
+
+Sakit
+
+</label>
+
+<label>
+
+<input type="radio"
+name="keterangan"
+value="Libur">
+
+Libur
+
+</label>
+
+</div>
+
 <input
 type="file"
 id="foto"
 accept="image/*">
+
+<button id="btnUpload">
+
+☁ Upload Presensi
+
+</button>
 
 <br><br>
 
@@ -79,12 +120,6 @@ width:250px;
 border-radius:10px;">
 
 <br><br>
-
-<button id="btnUpload">
-
-☁ Upload Presensi
-
-</button>
 
 <br><br>
 
