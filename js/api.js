@@ -40,6 +40,7 @@ class API {
             formData.append("tempat", data.tempat);
             formData.append("mimeType", data.mimeType);
             formData.append("base64", data.base64);
+            formData.append("keterangan", data.keterangan);
 
             const response = await fetch(
                 CONFIG.API_URL,

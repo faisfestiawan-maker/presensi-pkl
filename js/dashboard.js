@@ -15,7 +15,6 @@ document.getElementById("kelas").innerHTML="Kelas : "+siswa.kelas;
 document.getElementById("tempat").innerHTML="Tempat PKL : "+siswa.tempat;
 
 
-
 document.getElementById("logout").onclick=()=>{
 
     Storage.clear();
@@ -119,6 +118,14 @@ document.getElementById("btnUpload").onclick = async () => {
 
     const base64 = await toBase64(file);
 
+    const keterangan=
+
+    document.querySelector(
+
+        'input[name="keterangan"]:checked'
+
+    ).value;
+
     progress.value = 70;
 
     const data = {
@@ -136,6 +143,8 @@ document.getElementById("btnUpload").onclick = async () => {
         mimeType: file.type,
 
         base64: base64
+
+        keterangan: keterangan
 
     };
 
