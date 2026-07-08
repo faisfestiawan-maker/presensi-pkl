@@ -142,7 +142,7 @@ document.getElementById("btnUpload").onclick = async () => {
 
         mimeType: file.type,
 
-        base64: base64
+        base64: base64,
 
         keterangan: keterangan
 
@@ -199,9 +199,14 @@ async function loadStatus(){
 
     if(hasil && hasil.sudah){
 
-        statusEl.innerHTML=
+        let icon = "🟢";
 
-        "✅ Sudah presensi pukul "+hasil.jam;
+        if (hasil.keterangan === "Sakit") icon = "🤒";
+        if (hasil.keterangan === "Libur") icon = "🏠";
+
+        statusEl.innerHTML =
+        icon + " " + hasil.keterangan +
+        "<br>Pukul " + hasil.jam;
 
         if(btnUpload){
             btnUpload.disabled=true;
